@@ -14,9 +14,9 @@ Ensures all members of a Groupme chat are vibin. Warning: will remove users unti
 
 Once a bot is registered with Groupme the following requirements must be specified in the form of environment variables:
 
-* **USER_ID** - The ID of the user that should be mocked in the group chat.
+* **BOT_NAME** - The name of the bot to be refered to in the GroupChat
 
-  Example: `USER_ID=29384`    
+  Example: `BOT_NAME='Officer Vibe'`    
   
 * **BOT_ID** - The assigned bot ID by GroupMe.
 
