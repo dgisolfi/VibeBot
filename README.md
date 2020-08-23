@@ -1,53 +1,36 @@
-# pyTemplate <a href="http://www.wtfpl.net/"><img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png" width="80" height="15" alt="WTFPL" /></a>  [![Package Pypi](https://img.shields.io/pypi/v/FILL_THIS_IN.svg)](https://pypi.org/project/FILL_THIS_IN)
+# VibeBot <a href="http://www.wtfpl.net/"><img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png" width="80" height="15" alt="WTFPL" /></a>  [![Package Pypi](https://img.shields.io/pypi/v/VibeBot.svg)](https://pypi.org/project/VibeBot)
 
-My defacto python package - quick and clean. Used to create a new general python package.
+Ensures all members of a Groupme chat are vibin. Warning: will remove users until the vibe is achieved.
 
-## Install
+### Author
 
-### PyPi (Preferred Method)
+**Daniel Gisolfi** - *All current work* - [dgisolfi](https://github.com/dgisolfi)
 
-Run the following to install the latest version
-```
-python3 -m pip install pytemplate
-```
+## Groupme Bot
 
-If the repo is cloned to the host, run:
-```
-make nexus3-install
-```
-
-### From Source
-
-Clone the repository and run:
-
-```
-make install
-```
+ A GroupMe bot can be created [here](https://dev.groupme.com/bots) and using the Groupme API can send messages to its assigned group. This particular bot uses a callback URL to be notified of new messages. Once notified the message will be parsed and a response will be created if the `USER_ID` of the sender matches that of the `USER_ID` environment variable.
 
 ## Usage
 
-```python
-python3 -m pytemplate
-```
+Once a bot is registered with Groupme the following requirements must be specified in the form of environment variables:
 
-## Test
+* **USER_ID** - The ID of the user that should be mocked in the group chat.
 
-### Install Dependencies
+  Example: `USER_ID=29384`    
+  
+* **BOT_ID** - The assigned bot ID by GroupMe.
 
-```
-pipenv shell
-```
+  Example: `BOT_ID=a6a7a7a7a7a7a7a7a77a7a7`    
 
-*note: for dev dependencies add `--dev`*
+* **GROUP_ID** - The ID of the Groupme Chat where the bot resides
 
-### Run the Tests
+  Example: `GROUP_ID=0987890987`    
+* **API_TOKEN** - The api token for the authorized Groupme account
 
-```
-make test
-```
+  Example: `API_TOKEN=983u4ritgo0v98ujkorf`
+
+After the environment variables have been set run the Flask server, `python3 -m VibeBot`
 
 ## Found a bug?
 
-Please let us know! Submit an issue [here](https://github.com/dgisolfi/pyTemplate/issues).
-
-
+Please let us know! Submit an issue [here](https://github.com/dgisolfi/VibeBot/issues).
