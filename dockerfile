@@ -6,7 +6,7 @@ RUN apt-get update -y \
     python3-dev \
     build-essential
 
-EXPOSE 80
+EXPOSE 5080
 
 WORKDIR /bot
 COPY ./VibeBot ./VibeBot
