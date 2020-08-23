@@ -14,5 +14,4 @@ COPY setup.py .
 COPY README.md .
 
 RUN python3 -m pip install .
-
 CMD ["python3", "-m", "VibeBot"]

@@ -36,9 +36,9 @@ class Bot:
         """ Starts a new thread to countdown to a vibe check """
         delay = self.vibeTime()
         vibe_check_time = datetime.now() + timedelta(seconds=delay)
-        print(f"VibeBot => Current Time: {datetime.now()}")
-        print(f"VibeBot => Next Vibe check in: {delay} seconds.")
-        print(f"VibeBot => Vibe check will occur at: {vibe_check_time} seconds.")
+        print(f"VibeBot => Current Time: {datetime.now()}", flush=True)
+        print(f"VibeBot => Next Vibe check in: {delay} seconds.", flush=True)
+        print(f"VibeBot => Vibe check will occur at: {vibe_check_time} seconds.",flush=True)
         threading.Timer(delay, self.startVibeCheck).start()
 
     def sendMessage(self, msg, picture_url=None) -> requests.Response:
@@ -97,8 +97,8 @@ class Bot:
         Returns:
             int : the number of seconds till the next vibe check
         """
-        s = datetime.now() + timedelta(minutes=5)
-        e = s + timedelta(minutes=15)
+        s = datetime.now() + timedelta(hours=24)
+        e = s + timedelta(hours=48)
         d = self.randomDate(s, e) - datetime.now()
         # 86400 is 24 hours in seconds. We start our time delta at a
         # min of 24 hours so we need to account for that here
@@ -165,10 +165,12 @@ class Bot:
 
             # remove the user in 10 mins if they have not responded
             delay = 600
+            print("----------------", flush=True)
             print(
                 f"VibeBot => Member: {self.member['name']} has until "
-                + f"{ datetime.now() + timedelta(seconds=delay)} to answer the vibe check."
+                + f"{ datetime.now() + timedelta(seconds=delay)} to answer the vibe check.", flush=True
             )
+            print("----------------", flush=True)
             threading.Timer(delay, self.finishVibeCheck).start()
 
     def finishVibeCheck(self):

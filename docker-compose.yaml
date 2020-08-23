@@ -1,6 +1,6 @@
 # Filename: docker-compose.yaml
 
-version: '3'
+version: '2'
 services:
   vibe:
     build: .

@@ -46,11 +46,11 @@ def index():
 @server.route("/vibe", methods=["POST"])
 def vibe():
     data = request.get_json()
-
     if data is not None:
         if bot.checkForMention(data["text"]):
             if bot.member != None:
                 if data["user_id"] == bot.member["user_id"]:
+                    print("{bot.member['name']} passed the vibe check")
                     bot.stopVibeCheck()
             else:
                 bot.sendMessage("Leave me be, I'm trying to monitor these vibes.")
