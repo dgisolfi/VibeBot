@@ -1,0 +1,11 @@
+# Filename: docker-compose.yaml
+
+version: '3'
+services:
+  vibe:
+    build: .
+    ports:
+      - "5080:5080"
+    env_file: .env
+    volumes:
+        - .:/test

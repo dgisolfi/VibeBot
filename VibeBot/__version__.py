@@ -6,8 +6,8 @@ and copyright.
 """
 
 __version__ = "1.0.0"
-__title__ = "pytemplate"
-__description__ = "My defacto python package - quick and clean"
+__title__ = "VibeBot"
+__description__ = "Ensures all members of a Groupme chat are vibin."
 # you may want to change this...
 __user__ = "dgisolfi"
 __url__ = f"https://github.com/{__user__}/{__title__}"
