@@ -5,7 +5,7 @@ Includes title, description, URL, version, build, author/email, license,
 and copyright.
 """
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __title__ = "VibeBot"
 __description__ = "Ensures all members of a Groupme chat are vibin."
 # you may want to change this...

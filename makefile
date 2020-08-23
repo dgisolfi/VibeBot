@@ -1,7 +1,7 @@
 # Author: Daniel Nicolas Gisolfi
 
-repo=`grep -m 1 __title__ ./pytemplate/__version__.py | grep -o '"[^"]\+"' | cut -d '"' -f2`
-version=`grep -m 1 __version__ ./pytemplate/__version__.py | grep -o '"[^"]\+"' | cut -d '"' -f2`
+repo=`grep -m 1 __title__ ./VibeBot/__version__.py | grep -o '"[^"]\+"' | cut -d '"' -f2`
+version=`grep -m 1 __version__ ./VibeBot/__version__.py | grep -o '"[^"]\+"' | cut -d '"' -f2`
 pypi_url=https://upload.pypi.org/legacy/
 
 .PHONY: intro
