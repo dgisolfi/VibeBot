@@ -24,7 +24,7 @@ if __name__ == "__main__":
         long_description_content_type="text/markdown",
         packages=find_packages(exclude=["tests"]),
         install_requires=[
-            "certifi==2020.6.20",
+            "certifi==2022.12.7",
             "chardet==3.0.4",
             "click==7.1.2; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
             "flask==1.1.2",
